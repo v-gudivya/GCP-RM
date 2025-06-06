@@ -16,7 +16,7 @@ variable "project-id" {
 
 variable "topic-name" {
   type        = string
-  default     = "sentinelGcpResourceManager-topic"
+  default     = "sentinel-gcprm-topic"
   description = "Name of existing topic"
 }
 
@@ -35,39 +35,37 @@ resource "google_project_service" "enable-logging-api" {
   project = data.google_project.project.project_id
 }
 
-resource "google_pubsub_topic" "sentinelGcpResourceManager-topic" {
-  count   = "${var.topic-name != "sentinelGcpResourceManager-topic" ? 0 : 1}"
+resource "google_pubsub_topic" "sentinel--topic" {
+  count   = "${var.topic-name != "sentinel--topic" ? 0 : 1}"
   name    = var.topic-name
   project = data.google_project.project.project_id
 }
 
 resource "google_pubsub_subscription" "sentinel-subscription" {
   project = data.google_project.project.project_id
-  name    = "sentinel-subscription-GcpResourceManagerlogs"
+  name    = "sentinel-subscription-logs"
   topic   = var.topic-name
-  depends_on = [google_pubsub_topic.sentinelGcpResourceManager-topic]
+  depends_on = [google_pubsub_topic.sentinel--topic]
 }
 
 resource "google_logging_project_sink" "sentinel-sink" {
   project    = data.google_project.project.project_id
   count      = var.organization-id == "" ? 1 : 0
-  name       = "GcpResourceManager-logs-sentinel-sink"
+  name       = "gcprm-logs-sentinel-sink"
   destination = "pubsub.googleapis.com/projects/${data.google_project.project.project_id}/topics/${var.topic-name}"
-  depends_on = [google_pubsub_topic.sentinelGcpResourceManager-topic]
+  depends_on = [google_pubsub_topic.sentinel-gcprm-topic]
 
-  filter = <<EOT
-protoPayload.serviceName="cloudresourcemanager.googleapis.com"  EOT
+  filter = "(protoPayload.serviceName=cloudresourcemanager.googleapis.com AND (resource.type=project OR resource.type=folder OR resource.type=organization))"
   unique_writer_identity = true
 }
 
 resource "google_logging_organization_sink" "sentinel-organization-sink" {
   count = var.organization-id == "" ? 0 : 1
-  name   = "GcpResourceManager-logs-organization-sentinel-sink"
+  name   = "gcprm-logs-organization-sentinel-sink"
   org_id = var.organization-id
   destination = "pubsub.googleapis.com/projects/${data.google_project.project.project_id}/topics/${var.topic-name}"
 
-  filter = <<EOT
-protoPayload.serviceName="cloudresourcemanager.googleapis.com"  EOT
+  filter = "(protoPayload.serviceName=cloudresourcemanager.googleapis.com AND (resource.type=project OR resource.type=folder OR resource.type=organization))"
   include_children = true
 }
 
