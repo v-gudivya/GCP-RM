@@ -16,7 +16,7 @@ variable "project-id" {
 
 variable "topic-name" {
   type        = string
-  default     = "sentinel-gcprm-topic"
+  default     = "sentinelgcprm-topic"
   description = "Name of existing topic"
 }
 
@@ -35,17 +35,17 @@ resource "google_project_service" "enable-logging-api" {
   project = data.google_project.project.project_id
 }
 
-resource "google_pubsub_topic" "sentinel--topic" {
-  count   = "${var.topic-name != "sentinel--topic" ? 0 : 1}"
+resource "google_pubsub_topic" "sentinelgcprm-topic" {
+  count   = "${var.topic-name != "sentinelgcprm-topic" ? 0 : 1}"
   name    = var.topic-name
   project = data.google_project.project.project_id
 }
 
 resource "google_pubsub_subscription" "sentinel-subscription" {
   project = data.google_project.project.project_id
-  name    = "sentinel-subscription-logs"
+  name    = "sentinel-subscription-gcprmlogs"
   topic   = var.topic-name
-  depends_on = [google_pubsub_topic.sentinel--topic]
+  depends_on = [google_pubsub_topic.sentinelgcprm-topic]
 }
 
 resource "google_logging_project_sink" "sentinel-sink" {
@@ -53,9 +53,9 @@ resource "google_logging_project_sink" "sentinel-sink" {
   count      = var.organization-id == "" ? 1 : 0
   name       = "gcprm-logs-sentinel-sink"
   destination = "pubsub.googleapis.com/projects/${data.google_project.project.project_id}/topics/${var.topic-name}"
-  depends_on = [google_pubsub_topic.sentinel-gcprm-topic]
+  depends_on = [google_pubsub_topic.sentinelgcprm-topic]
 
-  filter = "(protoPayload.serviceName=cloudresourcemanager.googleapis.com AND (resource.type=project OR resource.type=folder OR resource.type=organization))"
+  filter = "protoPayload.serviceName=cloudresourcemanager.googleapis.com"
   unique_writer_identity = true
 }
 
@@ -65,7 +65,7 @@ resource "google_logging_organization_sink" "sentinel-organization-sink" {
   org_id = var.organization-id
   destination = "pubsub.googleapis.com/projects/${data.google_project.project.project_id}/topics/${var.topic-name}"
 
-  filter = "(protoPayload.serviceName=cloudresourcemanager.googleapis.com AND (resource.type=project OR resource.type=folder OR resource.type=organization))"
+  filter = "protoPayload.serviceName=cloudresourcemanager.googleapis.com"
   include_children = true
 }
 
