@@ -69,7 +69,6 @@ resource "google_logging_organization_sink" "rm_logs_to_bucket" {
 
   filter = "protoPayload.serviceName=cloudresourcemanager.googleapis.com"
   include_children = true
-  unique_writer_identity = true
 }
 
 # Project-level Sink → Log Bucket
@@ -110,7 +109,6 @@ resource "google_logging_project_sink" "logbucket_to_pubsub_sink" {
   project     = data.google_project.project.project_id
   destination = "pubsub.googleapis.com/projects/${data.google_project.project.project_id}/topics/${var.topic-name}"
   filter = "protoPayload.serviceName=cloudresourcemanager.googleapis.com"
-  log_bucket  = google_logging_project_bucket_config.rm_log_bucket.name
   unique_writer_identity = true
 }
 
