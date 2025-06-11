@@ -94,7 +94,7 @@ resource "google_project_iam_binding" "log_bucket_writer_project" {
 }
 
 resource "google_project_iam_binding" "log_bucket_writer_org" {
-  count   = var.organization-id == "" ? 1 : 0
+  count   = var.organization-id == "" ? 0 : 1
   project = data.google_project.project.project_id
   role    = "roles/logging.bucketWriter"
 
