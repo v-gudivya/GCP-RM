@@ -53,7 +53,7 @@ resource "google_logging_organization_sink" "sentinel-organization-sink" {
 
   filter                  = "protoPayload.serviceName=cloudresourcemanager.googleapis.com"
   include_children        = true
-  unique_writer_identity  = true
+  #unique_writer_identity  = true
   depends_on              = [google_pubsub_topic.sentinelgcp-rm-topic]
 }
 
