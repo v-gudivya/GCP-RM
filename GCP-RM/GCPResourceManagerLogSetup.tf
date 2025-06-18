@@ -11,19 +11,18 @@ terraform {
 
 variable "project-id" {
   type        = string
-  description = "Enter your project ID"
+  description = "Enter the GCP project ID where Pub/Sub topic and subscription should be created"
 }
 
 variable "topic-name" {
   type        = string
-  default     = "sentinelgcprm-topic"
-  description = "Name of existing topic"
+  default     = "sentinelgcp-rm-audit-topic"
+  description = "Name of the Pub/Sub topic"
 }
 
 variable "organization-id" {
   type        = string
-  default     = ""
-  description = "Organization id"
+  description = "Organization ID for organization-level sink"
 }
 
 data "google_project" "project" {
@@ -35,62 +34,40 @@ resource "google_project_service" "enable-logging-api" {
   project = data.google_project.project.project_id
 }
 
-resource "google_pubsub_topic" "sentinelgcprm-topic" {
-  count   = "${var.topic-name != "sentinelgcprm-topic" ? 0 : 1}"
+resource "google_pubsub_topic" "sentinelgcp-rm-audit-topic" {
   name    = var.topic-name
   project = data.google_project.project.project_id
 }
 
 resource "google_pubsub_subscription" "sentinel-subscription" {
-  project = data.google_project.project.project_id
-  name    = "sentinel-subscription-gcprmlogs"
-  topic   = var.topic-name
-  depends_on = [google_pubsub_topic.sentinelgcprm-topic]
-}
-
-resource "google_logging_project_sink" "sentinel-sink" {
-  project    = data.google_project.project.project_id
-  count      = var.organization-id == "" ? 1 : 0
-  name       = "gcprm-logs-sentinel-sink"
-  destination = "pubsub.googleapis.com/projects/${data.google_project.project.project_id}/topics/${var.topic-name}"
-  depends_on = [google_pubsub_topic.sentinelgcprm-topic]
-
-  filter = "protoPayload.serviceName=cloudresourcemanager.googleapis.com"
-  unique_writer_identity = true
+  project     = data.google_project.project.project_id
+  name        = "sentinel-subscription-gcp-rm-auditlogs"
+  topic       = google_pubsub_topic.sentinelgcp-rm-audit-topic.id
+  depends_on  = [google_pubsub_topic.sentinelgcp-rm-audit-topic]
 }
 
 resource "google_logging_organization_sink" "sentinel-organization-sink" {
-  count = var.organization-id == "" ? 0 : 1
-  name   = "gcprm-logs-organization-sentinel-sink"
-  org_id = var.organization-id
-  destination = "pubsub.googleapis.com/projects/${data.google_project.project.project_id}/topics/${var.topic-name}"
+  name        = "gcp-rm-audit-logs-organization-sentinel-sink"
+  org_id      = var.organization-id
+  destination = "pubsub.googleapis.com/projects/${data.google_project.project.project_id}/topics/${google_pubsub_topic.sentinelgcp-rm-audit-topic.name}"
 
-  filter = "protoPayload.serviceName=cloudresourcemanager.googleapis.com"
-  include_children = true
-}
-
-resource "google_project_iam_binding" "log-writer" {
-  count   = var.organization-id == "" ? 1 : 0
-  project = data.google_project.project.project_id
-  role    = "roles/pubsub.publisher"
-
-  members = [
-    google_logging_project_sink.sentinel-sink[0].writer_identity
-  ]
+  filter                  = "protoPayload.serviceName=cloudresourcemanager.googleapis.com OR protoPayload.serviceName=orgpolicy.googleapis.com"
+  include_children        = true
+  #unique_writer_identity  = true
+  depends_on              = [google_pubsub_topic.sentinelgcp-rm-audit-topic]
 }
 
 resource "google_project_iam_binding" "log-writer-organization" {
-  count   = var.organization-id == "" ? 0 : 1
   project = data.google_project.project.project_id
   role    = "roles/pubsub.publisher"
 
   members = [
-    google_logging_organization_sink.sentinel-organization-sink[0].writer_identity
+    google_logging_organization_sink.sentinel-organization-sink.writer_identity
   ]
 }
 
 output "An_output_message" {
-  value = "Please copy the following values to Sentinel"
+  value = "Organization sink created. Use the following values in Sentinel:"
 }
 
 output "GCP_project_id" {
