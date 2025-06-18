@@ -1,0 +1,47 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.186.136",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-13T13:25:10.600720086Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "orgpolicy.googleapis.com",
+      "methodName": "google.cloud.orgpolicy.v2.OrgPolicy.GetEffectivePolicy",
+      "authorizationInfo": [
+        {
+          "resource": "organizations/1009039574349/policies/custom.restrictN1MachineTypes",
+          "permission": "orgpolicy.policy.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "organizations/1009039574349/policies/custom.restrictN1MachineTypes",
+      "request": {
+        "name": "organizations/1009039574349/policies/custom.restrictN1MachineTypes",
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.GetEffectivePolicyRequest"
+      }
+    },
+    "insertId": "1a334whdqp7d",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.cloud.orgpolicy.v2.OrgPolicy.GetEffectivePolicy",
+        "service": "orgpolicy.googleapis.com"
+      }
+    },
+    "timestamp": "2025-06-13T13:25:10.600287197Z",
+    "severity": "INFO",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-13T13:25:11.406085639Z"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.186.136",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-13T13:25:21.577191261Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "orgpolicy.googleapis.com",
+      "methodName": "google.cloud.orgpolicy.v2.OrgPolicy.DeleteCustomConstraint",
+      "authorizationInfo": [
+        {
+          "resource": "organizations/1009039574349/customConstraints/custom.restrictN1MachineTypes",
+          "permission": "orgpolicy.customConstraints.delete",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "organizations/1009039574349/customConstraints/custom.restrictN1MachineTypes",
+      "request": {
+        "name": "organizations/1009039574349/customConstraints/custom.restrictN1MachineTypes",
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.DeleteCustomConstraintRequest"
+      }
+    },
+    "insertId": "1a334whdqpa7",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.cloud.orgpolicy.v2.OrgPolicy.DeleteCustomConstraint",
+        "service": "orgpolicy.googleapis.com"
+      }
+    },
+    "timestamp": "2025-06-13T13:25:21.556370533Z",
+    "severity": "NOTICE",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-13T13:25:22.215774942Z"
+  }
+]

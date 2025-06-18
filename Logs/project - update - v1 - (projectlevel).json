@@ -1,0 +1,90 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "2409:40f0:11d5:5cdf:95bb:ed0e:2718:a507",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "UpdateProject",
+      "authorizationInfo": [
+        {
+          "resource": "projects/msccp-test",
+          "permission": "resourcemanager.projects.update",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/msccp-test",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projects/msccp-test",
+          "permission": "resourcemanager.projects.update",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/msccp-test",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/msccp-test",
+      "request": {
+        "project": {
+          "name": "MSCCP-Test",
+          "parent": {
+            "type": "organization",
+            "id": "1009039574349"
+          },
+          "labels": {
+            "firebase": "enabled",
+            "firebase-core": "disabled",
+            "demo-env": "demo",
+            "env": "test"
+          }
+        },
+        "projectId": "msccp-test",
+        "@type": "type.googleapis.com/google.cloudresourcemanager.v1.UpdateProjectRequest"
+      },
+      "response": {
+        "name": "MSCCP-Test",
+        "lifecycleState": "ACTIVE",
+        "createTime": "2025-01-20T04:47:34.797717Z",
+        "parent": {
+          "id": "1009039574349",
+          "type": "organization"
+        },
+        "labels": {
+          "demo-env": "demo",
+          "env": "test",
+          "firebase": "enabled",
+          "firebase-core": "disabled"
+        },
+        "projectId": "msccp-test",
+        "projectNumber": "135492226944",
+        "@type": "type.googleapis.com/google.cloudresourcemanager.v1.Project"
+      }
+    },
+    "insertId": "-tcm4zme1rcek",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "msccp-test"
+      }
+    },
+    "timestamp": "2025-06-13T06:56:26.836872Z",
+    "severity": "NOTICE",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-13T06:56:28.183840565Z"
+  }
+]

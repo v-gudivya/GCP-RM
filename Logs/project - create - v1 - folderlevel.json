@@ -1,0 +1,57 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.59.192.160",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "CreateProject",
+      "authorizationInfo": [
+        {
+          "resource": "folders/41643181195",
+          "permission": "resourcemanager.projects.create",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "folders/41643181195",
+      "request": {
+        "@type": "type.googleapis.com/google.cloudresourcemanager.v1.CreateProjectRequest",
+        "project": {
+          "projectId": "gcp-rm-project",
+          "parent": {
+            "id": "41643181195",
+            "type": "folder"
+          },
+          "name": "GCP-RM Project"
+        }
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.longrunning.Operation"
+      }
+    },
+    "insertId": "jq07t0dt4oo",
+    "resource": {
+      "type": "folder",
+      "labels": {
+        "folder_id": "41643181195"
+      }
+    },
+    "timestamp": "2025-06-11T05:32:51.876111Z",
+    "severity": "NOTICE",
+    "logName": "folders/41643181195/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-11T05:32:52.629639676Z"
+  }
+]

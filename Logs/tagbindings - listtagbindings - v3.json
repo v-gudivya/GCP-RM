@@ -1,0 +1,53 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il",
+        "principalSubject": "user:scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "34.143.181.7",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/525.0.0 command/gcloud.resource-manager.tags.bindings.list invocation-id/5f3146717a594c25ba71e25bb28dd56b environment/devshell environment-version/None client-os/LINUX client-os-ver/6.6.87 client-pltf-arch/x86_64 interactive/True from-script/False python/3.12.10 term/screen (Linux 6.6.87+),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.TagBindings.ListTagBindings",
+      "authorizationInfo": [
+        {
+          "resource": "projects/135492226944",
+          "permission": "resourcemanager.hierarchyNodes.listTagBindings",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/135492226944",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "projects/msccp-test",
+      "request": {
+        "parent": "//cloudresourcemanager.googleapis.com/projects/msccp-test",
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.ListTagBindingsRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.ListTagBindingsResponse"
+      }
+    },
+    "insertId": "1kx30bre1f6cr",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "msccp-test",
+        "service": "cloudresourcemanager.googleapis.com",
+        "method": "google.cloud.resourcemanager.v3.TagBindings.ListTagBindings"
+      }
+    },
+    "timestamp": "2025-06-13T11:25:12.883683184Z",
+    "severity": "INFO",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-13T11:25:13.585705424Z"
+  }
+]

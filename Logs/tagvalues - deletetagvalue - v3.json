@@ -1,0 +1,51 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.TagValues.DeleteTagValue",
+      "authorizationInfo": [
+        {
+          "resource": "tagValues/281484394337940",
+          "permission": "resourcemanager.tagValues.delete",
+          "granted": true,
+          "resourceAttributes": {}
+        }
+      ],
+      "resourceName": "tagValues/281484394337940",
+      "response": {
+        "parent": "tagKeys/281477194365576",
+        "createTime": "2025-06-13T09:50:47.953417Z",
+        "name": "tagValues/281484394337940",
+        "updateTime": "2025-06-13T09:50:47.953417Z",
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.TagValue"
+      }
+    },
+    "insertId": "-tddkktelkrue",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "msccp-test",
+        "service": "cloudresourcemanager.googleapis.com",
+        "method": "google.cloud.resourcemanager.v3.TagValues.DeleteTagValue"
+      }
+    },
+    "timestamp": "2025-06-13T09:51:11.842032Z",
+    "severity": "NOTICE",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "operations/rdtv.global.6689241461595626489",
+      "producer": "cloudresourcemanager.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2025-06-13T09:51:12.833297211Z"
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il",
+        "principalSubject": "user:scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "35.197.137.190",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/525.0.0 command/gcloud.org-policies.list invocation-id/cb79ccc3371d453eb88ea2915aaa8a46 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.6.87 client-pltf-arch/x86_64 interactive/True from-script/False python/3.12.10 term/screen (Linux 6.6.87+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-13T13:29:22.190355818Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "orgpolicy.googleapis.com",
+      "methodName": "google.cloud.orgpolicy.v2.OrgPolicy.ListPolicies",
+      "authorizationInfo": [
+        {
+          "resource": "projects/msccp-test",
+          "permission": "orgpolicy.policies.list",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "projects/msccp-test",
+      "request": {
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.ListPoliciesRequest",
+        "parent": "projects/msccp-test"
+      }
+    },
+    "insertId": "skwvv0d43u8",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "orgpolicy.googleapis.com",
+        "project_id": "msccp-test",
+        "method": "google.cloud.orgpolicy.v2.OrgPolicy.ListPolicies"
+      }
+    },
+    "timestamp": "2025-06-13T13:29:22.180343909Z",
+    "severity": "INFO",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-13T13:29:22.447079622Z"
+  }
+]

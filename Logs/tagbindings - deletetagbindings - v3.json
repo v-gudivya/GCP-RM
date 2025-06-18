@@ -1,0 +1,53 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il",
+        "principalSubject": "user:scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "34.143.181.7",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/525.0.0 command/gcloud.resource-manager.tags.bindings.delete invocation-id/14e9e130bae2409398ca226b952e77f9 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.6.87 client-pltf-arch/x86_64 interactive/True from-script/False python/3.12.10 term/screen (Linux 6.6.87+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-13T10:45:04.057938Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.TagBindings.DeleteTagBinding",
+      "authorizationInfo": [
+        {
+          "resource": "projects/135492226944",
+          "permission": "resourcemanager.hierarchyNodes.deleteTagBinding",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/135492226944",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/135492226944",
+      "request": {
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.DeleteTagBindingRequest",
+        "name": "tagBindings/%2F%2Fcloudresourcemanager.googleapis.com%2Fprojects%2Fmsccp-test/tagValues/281479441812168"
+      }
+    },
+    "insertId": "b58bj1eonrii",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.cloud.resourcemanager.v3.TagBindings.DeleteTagBinding",
+        "project_id": "msccp-test",
+        "service": "cloudresourcemanager.googleapis.com"
+      }
+    },
+    "timestamp": "2025-06-13T10:45:03.660116Z",
+    "severity": "NOTICE",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-13T10:45:04.206781513Z"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.160.189",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-12T17:49:53.406769314Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.Folders.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "folders/1089497039551",
+          "permission": "resourcemanager.folders.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "folders/1089497039551",
+            "type": "cloudresourcemanager.googleapis.com/Folder"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "folders/1089497039551",
+      "request": {
+        "resource": "folders/1089497039551",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "171durge1gczf",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "cloudresourcemanager.googleapis.com",
+        "method": "google.cloud.resourcemanager.v3.Folders.SetIamPolicy"
+      }
+    },
+    "timestamp": "2025-06-12T17:49:53.397362183Z",
+    "severity": "NOTICE",
+    "logName": "folders/1089497039551/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-12T17:49:54.436333250Z"
+  }
+]

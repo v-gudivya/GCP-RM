@@ -1,0 +1,375 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.162.40",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "organizations/1009039574349",
+          "permission": "resourcemanager.organizations.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "organizations/1009039574349",
+            "type": "cloudresourcemanager.googleapis.com/Organization"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "organizations/1009039574349",
+      "serviceData": {
+        "@type": "type.googleapis.com/google.iam.v1.logging.AuditData",
+        "policyDelta": {
+          "bindingDeltas": [
+            {
+              "action": "REMOVE",
+              "role": "roles/resourcemanager.tagAdmin",
+              "member": "user:scuba@np-lab.co.il"
+            }
+          ]
+        }
+      },
+      "request": {
+        "policy": {
+          "bindings": [
+            {
+              "role": "organizations/1009039574349/roles/prismaCloudComputeScopedViewerfabur",
+              "members": [
+                "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+              ]
+            },
+            {
+              "members": [
+                "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+              ],
+              "role": "organizations/1009039574349/roles/prismaCloudViewerfabur"
+            },
+            {
+              "members": [
+                "user:scuba@np-lab.co.il"
+              ],
+              "role": "roles/axt.admin"
+            },
+            {
+              "role": "roles/billing.admin",
+              "members": [
+                "user:sentinel@np-lab.co.il"
+              ]
+            },
+            {
+              "members": [
+                "domain:np-lab.co.il"
+              ],
+              "role": "roles/billing.creator"
+            },
+            {
+              "members": [
+                "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+              ],
+              "role": "roles/cloudfunctions.viewer"
+            },
+            {
+              "members": [
+                "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+              ],
+              "role": "roles/compute.networkAdmin"
+            },
+            {
+              "members": [
+                "user:scuba@np-lab.co.il"
+              ],
+              "role": "roles/compute.storageAdmin"
+            },
+            {
+              "members": [
+                "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+              ],
+              "role": "roles/container.clusterViewer"
+            },
+            {
+              "members": [
+                "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+              ],
+              "role": "roles/iam.organizationRoleViewer"
+            },
+            {
+              "members": [
+                "user:scuba@np-lab.co.il"
+              ],
+              "role": "roles/logging.admin"
+            },
+            {
+              "members": [
+                "user:scuba@np-lab.co.il",
+                "user:sentinel@np-lab.co.il"
+              ],
+              "role": "roles/orgpolicy.policyAdmin"
+            },
+            {
+              "role": "roles/owner",
+              "members": [
+                "user:sentinel@np-lab.co.il"
+              ]
+            },
+            {
+              "members": [
+                "user:scuba@np-lab.co.il"
+              ],
+              "role": "roles/resourcemanager.folderAdmin"
+            },
+            {
+              "role": "roles/resourcemanager.folderViewer",
+              "members": [
+                "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+              ]
+            },
+            {
+              "members": [
+                "user:scuba@np-lab.co.il",
+                "user:sentinel@np-lab.co.il"
+              ],
+              "role": "roles/resourcemanager.organizationAdmin"
+            },
+            {
+              "members": [
+                "domain:np-lab.co.il"
+              ],
+              "role": "roles/resourcemanager.projectCreator"
+            },
+            {
+              "members": [
+                "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+              ],
+              "role": "roles/storage.admin"
+            },
+            {
+              "members": [
+                "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+              ],
+              "role": "roles/storage.objectViewer"
+            },
+            {
+              "members": [
+                "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+              ],
+              "role": "roles/viewer"
+            }
+          ],
+          "auditConfigs": [
+            {
+              "service": "allServices",
+              "auditLogConfigs": [
+                {
+                  "logType": "ADMIN_READ"
+                },
+                {
+                  "logType": "DATA_READ"
+                },
+                {
+                  "logType": "DATA_WRITE"
+                }
+              ]
+            },
+            {
+              "service": "cloudresourcemanager.googleapis.com",
+              "auditLogConfigs": [
+                {
+                  "logType": "ADMIN_READ"
+                },
+                {
+                  "logType": "DATA_READ"
+                },
+                {
+                  "logType": "DATA_WRITE"
+                }
+              ]
+            }
+          ],
+          "etag": "BwY3OQ5nOyE="
+        },
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "organizations/1009039574349"
+      },
+      "response": {
+        "bindings": [
+          {
+            "role": "organizations/1009039574349/roles/prismaCloudComputeScopedViewerfabur",
+            "members": [
+              "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+            ]
+          },
+          {
+            "members": [
+              "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+            ],
+            "role": "organizations/1009039574349/roles/prismaCloudViewerfabur"
+          },
+          {
+            "role": "roles/axt.admin",
+            "members": [
+              "user:scuba@np-lab.co.il"
+            ]
+          },
+          {
+            "members": [
+              "user:sentinel@np-lab.co.il"
+            ],
+            "role": "roles/billing.admin"
+          },
+          {
+            "members": [
+              "domain:np-lab.co.il"
+            ],
+            "role": "roles/billing.creator"
+          },
+          {
+            "members": [
+              "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+            ],
+            "role": "roles/cloudfunctions.viewer"
+          },
+          {
+            "members": [
+              "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+            ],
+            "role": "roles/compute.networkAdmin"
+          },
+          {
+            "role": "roles/compute.storageAdmin",
+            "members": [
+              "user:scuba@np-lab.co.il"
+            ]
+          },
+          {
+            "members": [
+              "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+            ],
+            "role": "roles/container.clusterViewer"
+          },
+          {
+            "members": [
+              "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+            ],
+            "role": "roles/iam.organizationRoleViewer"
+          },
+          {
+            "role": "roles/logging.admin",
+            "members": [
+              "user:scuba@np-lab.co.il"
+            ]
+          },
+          {
+            "members": [
+              "user:scuba@np-lab.co.il",
+              "user:sentinel@np-lab.co.il"
+            ],
+            "role": "roles/orgpolicy.policyAdmin"
+          },
+          {
+            "role": "roles/owner",
+            "members": [
+              "user:sentinel@np-lab.co.il"
+            ]
+          },
+          {
+            "members": [
+              "user:scuba@np-lab.co.il"
+            ],
+            "role": "roles/resourcemanager.folderAdmin"
+          },
+          {
+            "members": [
+              "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+            ],
+            "role": "roles/resourcemanager.folderViewer"
+          },
+          {
+            "members": [
+              "user:scuba@np-lab.co.il",
+              "user:sentinel@np-lab.co.il"
+            ],
+            "role": "roles/resourcemanager.organizationAdmin"
+          },
+          {
+            "members": [
+              "domain:np-lab.co.il"
+            ],
+            "role": "roles/resourcemanager.projectCreator"
+          },
+          {
+            "members": [
+              "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+            ],
+            "role": "roles/storage.admin"
+          },
+          {
+            "members": [
+              "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+            ],
+            "role": "roles/storage.objectViewer"
+          },
+          {
+            "members": [
+              "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+            ],
+            "role": "roles/viewer"
+          }
+        ],
+        "auditConfigs": [
+          {
+            "auditLogConfigs": [
+              {
+                "logType": "ADMIN_READ"
+              },
+              {
+                "logType": "DATA_READ"
+              },
+              {
+                "logType": "DATA_WRITE"
+              }
+            ],
+            "service": "allServices"
+          },
+          {
+            "auditLogConfigs": [
+              {
+                "logType": "ADMIN_READ"
+              },
+              {
+                "logType": "DATA_READ"
+              },
+              {
+                "logType": "DATA_WRITE"
+              }
+            ],
+            "service": "cloudresourcemanager.googleapis.com"
+          }
+        ],
+        "etag": "BwY3Pad6jJU=",
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "banm7d3rvq",
+    "resource": {
+      "type": "organization",
+      "labels": {
+        "organization_id": "1009039574349"
+      }
+    },
+    "timestamp": "2025-06-10T20:36:42.312098Z",
+    "severity": "NOTICE",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-10T20:36:42.995843035Z"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com",
+        "serviceAccountKeyName": "//iam.googleapis.com/projects/msccp-test/serviceAccounts/prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com/keys/711d0583951468a4c27f724399f859fe83b788fd",
+        "principalSubject": "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+      },
+      "requestMetadata": {
+        "callerIp": "52.208.244.121",
+        "callerSuppliedUserAgent": "Vert.x-WebClient/4.5.11,gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-17T02:49:15.379295759Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.Folders.GetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "folders/1089497039551",
+          "permission": "resourcemanager.folders.getIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "folders/1089497039551",
+            "type": "cloudresourcemanager.googleapis.com/Folder"
+          },
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "folders/1089497039551",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.GetIamPolicyRequest",
+        "resource": "folders/1089497039551"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "1qg331ne64bqe",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "cloudresourcemanager.googleapis.com",
+        "method": "google.cloud.resourcemanager.v3.Folders.GetIamPolicy"
+      }
+    },
+    "timestamp": "2025-06-17T02:49:15.360626782Z",
+    "severity": "INFO",
+    "logName": "folders/1089497039551/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-17T02:49:16.383735818Z"
+  }
+]

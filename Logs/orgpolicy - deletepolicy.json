@@ -1,0 +1,48 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.162.40",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-10T21:07:42.471316134Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "orgpolicy.googleapis.com",
+      "methodName": "google.cloud.orgpolicy.v2.OrgPolicy.DeletePolicy",
+      "authorizationInfo": [
+        {
+          "resource": "organizations/1009039574349/policies/iam.serviceAccountKeyExpiryHours",
+          "permission": "orgpolicy.policies.delete",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "organizations/1009039574349/policies/iam.serviceAccountKeyExpiryHours",
+      "request": {
+        "etag": "COy5osIGELCFvYoD-",
+        "name": "organizations/1009039574349/policies/iam.serviceAccountKeyExpiryHours",
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.DeletePolicyRequest"
+      }
+    },
+    "insertId": "11h55yhe2blvh",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "orgpolicy.googleapis.com",
+        "method": "google.cloud.orgpolicy.v2.OrgPolicy.DeletePolicy"
+      }
+    },
+    "timestamp": "2025-06-10T21:07:42.458459539Z",
+    "severity": "NOTICE",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-10T21:07:43.563559985Z"
+  }
+]

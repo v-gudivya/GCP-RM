@@ -1,0 +1,66 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "2409:40f0:11d5:5cdf:95bb:ed0e:2718:a507",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-13T07:31:08.728719157Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.TagValues.UpdateTagValue",
+      "authorizationInfo": [
+        {
+          "resource": "tagValues/281479441812168",
+          "permission": "resourcemanager.tagValues.update",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "tagValues/281479441812168",
+            "type": "cloudresourcemanager.googleapis.com/TagValue"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "tagValues/281479441812168",
+      "request": {
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.UpdateTagValueRequest",
+        "tagValue": {
+          "name": "tagValues/281479441812168"
+        }
+      },
+      "response": {
+        "updateTime": "2025-06-13T07:31:08.748377Z",
+        "tagKey": "tagKeys/281484853992942",
+        "etag": "sRDtXIO2Pkp8lZ+yW3T7sQ==",
+        "name": "tagValues/281479441812168",
+        "parent": "tagKeys/281484853992942",
+        "namespacedName": "msccp-test/Test RM/env",
+        "createTime": "2025-06-13T06:20:57.224300Z",
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.TagValue",
+        "shortName": "env",
+        "description": "Testing purpose"
+      }
+    },
+    "insertId": "1b6bcr4e1fp62",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "msccp-test",
+        "service": "cloudresourcemanager.googleapis.com",
+        "method": "google.cloud.resourcemanager.v3.TagValues.UpdateTagValue"
+      }
+    },
+    "timestamp": "2025-06-13T07:31:08.717031186Z",
+    "severity": "NOTICE",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-13T07:31:08.856614305Z"
+  }
+]

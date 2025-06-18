@@ -1,0 +1,53 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 7,
+        "message": "The caller does not have permission"
+      },
+      "authenticationInfo": {
+        "principalEmail": "cloudhealthserviceaccount@azure-sentinel-poc-436113.iam.gserviceaccount.com",
+        "serviceAccountKeyName": "//iam.googleapis.com/projects/azure-sentinel-poc-436113/serviceAccounts/cloudhealthserviceaccount@azure-sentinel-poc-436113.iam.gserviceaccount.com/keys/1867963b9905ee56f3883a33a3838ff2f6120b07",
+        "principalSubject": "serviceAccount:cloudhealthserviceaccount@azure-sentinel-poc-436113.iam.gserviceaccount.com"
+      },
+      "requestMetadata": {
+        "callerIp": "98.82.228.45",
+        "callerSuppliedUserAgent": "unknown/0.0.0 google-api-ruby-client/0.32.2 Linux/5.15.0-1072-aws (gzip),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "GetProject",
+      "authorizationInfo": [
+        {
+          "resource": "projects/msccp-test",
+          "permission": "resourcemanager.projects.get",
+          "granted": false,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/msccp-test",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "projects/msccp-test",
+      "request": {
+        "@type": "type.googleapis.com/google.cloudresourcemanager.projects.v1beta1.GetProjectRequest",
+        "projectId": "msccp-test"
+      }
+    },
+    "insertId": "-eeoak0e1hijg",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "msccp-test"
+      }
+    },
+    "timestamp": "2025-06-15T20:32:10.756301Z",
+    "severity": "ERROR",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-15T20:32:11.733756006Z"
+  }
+]

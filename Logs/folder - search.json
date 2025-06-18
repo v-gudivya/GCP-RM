@@ -1,0 +1,41 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com",
+        "serviceAccountKeyName": "//iam.googleapis.com/projects/msccp-test/serviceAccounts/prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com/keys/711d0583951468a4c27f724399f859fe83b788fd",
+        "principalSubject": "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+      },
+      "requestMetadata": {
+        "callerIp": "99.81.226.57",
+        "callerSuppliedUserAgent": "Vert.x-WebClient/4.5.11,gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "CloudResourceManagerFoldersV3Service-SearchFolders",
+      "authorizationInfo": [
+        {
+          "resourceAttributes": {}
+        }
+      ],
+      "resourceName": "folders/1089497039551",
+      "request": {
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.SearchFoldersRequest"
+      }
+    },
+    "insertId": "8nnd65f1xuk4g",
+    "resource": {
+      "type": "folder",
+      "labels": {
+        "folder_id": "1089497039551"
+      }
+    },
+    "timestamp": "2025-06-16T07:12:16.681275Z",
+    "severity": "INFO",
+    "logName": "folders/1089497039551/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-16T07:12:17.668063890Z"
+  }
+]

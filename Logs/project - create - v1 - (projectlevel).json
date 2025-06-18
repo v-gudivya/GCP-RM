@@ -1,0 +1,60 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "49.205.45.203",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "CreateProject",
+      "authorizationInfo": [
+        {
+          "resource": "organizations/1009039574349",
+          "permission": "resourcemanager.projects.create",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resourceAttributes": {}
+        }
+      ],
+      "resourceName": "projects/manish-ccp-test",
+      "request": {
+        "@type": "type.googleapis.com/google.cloudresourcemanager.v1.CreateProjectRequest",
+        "project": {
+          "projectId": "manish-ccp-test",
+          "lifecycleState": "ACTIVE",
+          "createTime": "2025-06-12T04:37:03.378399Z",
+          "name": "manish-ccp-test",
+          "parent": {
+            "id": "1009039574349",
+            "type": "organization"
+          },
+          "projectNumber": "79383268239"
+        }
+      }
+    },
+    "insertId": "-9dh4d4d9clf",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "manish-ccp-test"
+      }
+    },
+    "timestamp": "2025-06-12T04:37:03.552084Z",
+    "severity": "NOTICE",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-12T04:37:04.211133731Z"
+  }
+]

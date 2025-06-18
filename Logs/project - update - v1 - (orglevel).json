@@ -1,0 +1,85 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il",
+        "principalSubject": "user:scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "34.126.99.132",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/525.0.0 command/gcloud.beta.projects.move invocation-id/7bc03a073c2449cba778c084d1252834 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.6.87 client-pltf-arch/x86_64 interactive/True from-script/False python/3.12.10 term/screen (Linux 6.6.87+),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "UpdateProject",
+      "authorizationInfo": [
+        {
+          "resource": "organizations/1009039574349",
+          "permission": "resourcemanager.projects.move",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "organizations/1009039574349",
+            "type": "cloudresourcemanager.googleapis.com/Organization"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/test-project-461311",
+      "request": {
+        "@type": "type.googleapis.com/google.cloudresourcemanager.v1.UpdateProjectRequest",
+        "projectId": "test-project-461311",
+        "project": {
+          "createTime": "2025-05-29T11:07:32.926992Z",
+          "projectNumber": "773914864874",
+          "projectId": "test-project-461311",
+          "parent": {
+            "id": "190180555281",
+            "type": "folder"
+          },
+          "name": "Test Project",
+          "lifecycleState": "ACTIVE"
+        }
+      },
+      "response": {
+        "parent": {
+          "id": "190180555281",
+          "type": "folder"
+        },
+        "projectNumber": "773914864874",
+        "projectId": "test-project-461311",
+        "lifecycleState": "ACTIVE",
+        "@type": "type.googleapis.com/google.cloudresourcemanager.v1.Project",
+        "createTime": "2025-05-29T11:07:32.926992Z",
+        "name": "Test Project"
+      },
+      "metadata": {
+        "@type": "type.googleapis.com/cloud.resourcemanager.common.auditlogging.ProjectAuditDelta",
+        "parentDelta": {
+          "destinationParent": {
+            "id": "190180555281",
+            "type": "folder"
+          },
+          "sourceParent": {
+            "id": "1009039574349",
+            "type": "organization"
+          }
+        }
+      }
+    },
+    "insertId": "-gbn6yme1l5t6",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "test-project-461311"
+      }
+    },
+    "timestamp": "2025-06-13T04:30:54.320455Z",
+    "severity": "NOTICE",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-13T04:30:59.013675469Z"
+  }
+]

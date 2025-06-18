@@ -1,0 +1,71 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.186.136",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-13T13:16:03.618010081Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "orgpolicy.googleapis.com",
+      "methodName": "google.cloud.orgpolicy.v2.OrgPolicy.CreatePolicy",
+      "authorizationInfo": [
+        {
+          "resource": "organizations/1009039574349",
+          "permission": "orgpolicy.policies.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "organizations/1009039574349",
+      "request": {
+        "policy": {
+          "spec": {
+            "rules": [
+              {
+                "enforce": true
+              }
+            ]
+          },
+          "name": "organizations/1009039574349/policies/custom.restrictN1MachineTypes"
+        },
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.CreatePolicyRequest",
+        "parent": "organizations/1009039574349"
+      },
+      "response": {
+        "name": "organizations/1009039574349/policies/custom.restrictN1MachineTypes",
+        "spec": {
+          "etag": "CJPJsMIGELDQz9IC",
+          "rules": [
+            {
+              "enforce": true
+            }
+          ],
+          "updateTime": "2025-06-13T13:16:03.710142Z"
+        },
+        "etag": "CJPJsMIGELDQz9IC-",
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.Policy"
+      }
+    },
+    "insertId": "lnh7kndqzn3",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.cloud.orgpolicy.v2.OrgPolicy.CreatePolicy",
+        "service": "orgpolicy.googleapis.com"
+      }
+    },
+    "timestamp": "2025-06-13T13:16:03.604501142Z",
+    "severity": "NOTICE",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-13T13:16:04.267065849Z"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.59.192.160",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-11T03:22:36.264973134Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.Organizations.GetOrganization",
+      "authorizationInfo": [
+        {
+          "resource": "organizations/1009039574349",
+          "permission": "resourcemanager.organizations.get",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "organizations/1009039574349",
+            "type": "cloudresourcemanager.googleapis.com/Organization"
+          },
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "organizations/1009039574349",
+      "request": {
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.GetOrganizationRequest",
+        "name": "organizations/1009039574349"
+      }
+    },
+    "insertId": "5ahum4dv99r",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "cloudresourcemanager.googleapis.com",
+        "method": "google.cloud.resourcemanager.v3.Organizations.GetOrganization"
+      }
+    },
+    "timestamp": "2025-06-11T03:22:36.257979961Z",
+    "severity": "INFO",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-11T03:22:37.289644859Z"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.186.136",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "GetFolder",
+      "authorizationInfo": [
+        {
+          "resource": "folders/1089497039551",
+          "permission": "resourcemanager.folders.get",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "folders/1089497039551",
+            "type": "cloudresourcemanager.googleapis.com/Folder"
+          },
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "folders/1089497039551",
+      "request": {
+        "name": "folders/1089497039551",
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v2.GetFolderRequest"
+      }
+    },
+    "insertId": "-6325vhd7u9i",
+    "resource": {
+      "type": "folder",
+      "labels": {
+        "folder_id": "1089497039551"
+      }
+    },
+    "timestamp": "2025-06-13T13:35:31.911898Z",
+    "severity": "INFO",
+    "logName": "folders/1089497039551/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-13T13:35:32.175363806Z"
+  }
+]

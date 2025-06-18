@@ -1,0 +1,44 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.TagKeys.CreateTagKey",
+      "authorizationInfo": [
+        {
+          "resource": "projects/135492226944",
+          "permission": "resourcemanager.tagKeys.create",
+          "granted": true,
+          "resourceAttributes": {}
+        }
+      ],
+      "resourceName": "projects/135492226944"
+    },
+    "insertId": "yfsfk9ej2lnc",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.cloud.resourcemanager.v3.TagKeys.CreateTagKey",
+        "project_id": "msccp-test",
+        "service": "cloudresourcemanager.googleapis.com"
+      }
+    },
+    "timestamp": "2025-06-13T09:50:46.901019Z",
+    "severity": "NOTICE",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "operations/rctk.global.5533397330088578150",
+      "producer": "cloudresourcemanager.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2025-06-13T09:50:47.029515679Z"
+  }
+]

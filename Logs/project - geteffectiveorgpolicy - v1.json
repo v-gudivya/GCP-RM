@@ -1,0 +1,48 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "private",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "GetEffectiveOrgPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/msccp-test",
+          "permission": "orgpolicy.policy.get",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/msccp-test",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "projects/msccp-test",
+      "request": {
+        "resource": "projects/msccp-test",
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v1.GetEffectiveOrgPolicyRequest",
+        "constraint": "constraints/compute.requireShieldedVm"
+      }
+    },
+    "insertId": "78iqx3d838y",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "msccp-test"
+      }
+    },
+    "timestamp": "2025-06-13T12:43:44.063106Z",
+    "severity": "INFO",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-13T12:43:44.846125389Z"
+  }
+]

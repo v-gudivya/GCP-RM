@@ -1,0 +1,52 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.186.136",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-13T11:37:21.232055749Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.TagValues.GetTagValue",
+      "authorizationInfo": [
+        {
+          "resource": "tagValues/281479441812168",
+          "permission": "resourcemanager.tagValues.get",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "tagValues/281479441812168",
+            "type": "cloudresourcemanager.googleapis.com/TagValue"
+          },
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "tagValues/281479441812168",
+      "request": {
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.GetTagValueRequest",
+        "name": "tagValues/281479441812168"
+      }
+    },
+    "insertId": "p0x9apdqamp",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "msccp-test",
+        "method": "google.cloud.resourcemanager.v3.TagValues.GetTagValue",
+        "service": "cloudresourcemanager.googleapis.com"
+      }
+    },
+    "timestamp": "2025-06-13T11:37:21.215999663Z",
+    "severity": "INFO",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-13T11:37:21.989207735Z"
+  }
+]

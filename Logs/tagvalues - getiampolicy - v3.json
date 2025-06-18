@@ -1,0 +1,52 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "2409:40f0:11d5:5cdf:95bb:ed0e:2718:a507",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-13T06:27:06.647128860Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.TagValues.GetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "tagValues/281479441812168",
+          "permission": "resourcemanager.tagValues.getIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "tagValues/281479441812168",
+            "type": "cloudresourcemanager.googleapis.com/TagValue"
+          },
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "tagValues/281479441812168",
+      "request": {
+        "resource": "tagValues/281479441812168",
+        "@type": "type.googleapis.com/google.iam.v1.GetIamPolicyRequest"
+      }
+    },
+    "insertId": "3bxwdadxv4d",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "msccp-test",
+        "service": "cloudresourcemanager.googleapis.com",
+        "method": "google.cloud.resourcemanager.v3.TagValues.GetIamPolicy"
+      }
+    },
+    "timestamp": "2025-06-13T06:27:06.636444801Z",
+    "severity": "INFO",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-13T06:27:07.649719633Z"
+  }
+]

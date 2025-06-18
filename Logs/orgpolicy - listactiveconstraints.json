@@ -1,0 +1,47 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.167.118",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-16T06:44:50.503695299Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "orgpolicy.googleapis.com",
+      "methodName": "google.cloud.orgpolicy.v2.OrgPolicy.ListActiveConstraints",
+      "authorizationInfo": [
+        {
+          "resource": "organizations/1009039574349",
+          "permission": "orgpolicy.policies.list",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "organizations/1009039574349",
+      "request": {
+        "parent": "organizations/1009039574349",
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.ListActiveConstraintsRequest"
+      }
+    },
+    "insertId": "skwvv0e1826f",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "orgpolicy.googleapis.com",
+        "method": "google.cloud.orgpolicy.v2.OrgPolicy.ListActiveConstraints"
+      }
+    },
+    "timestamp": "2025-06-16T06:44:50.496560150Z",
+    "severity": "INFO",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-16T06:44:51.436741381Z"
+  }
+]

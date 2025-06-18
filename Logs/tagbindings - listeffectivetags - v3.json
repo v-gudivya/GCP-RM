@@ -1,0 +1,52 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "49.205.45.203",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.TagBindings.ListEffectiveTags",
+      "authorizationInfo": [
+        {
+          "resource": "projects/135492226944/global/networks/858219784076750041",
+          "permission": "compute.networks.listEffectiveTags",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "compute.googleapis.com",
+            "name": "projects/135492226944/global/networks/858219784076750041",
+            "type": "compute.googleapis.com/Network"
+          },
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "projects/msccp-test/global/networks/858219784076750041",
+      "request": {
+        "parent": "//compute.googleapis.com/projects/msccp-test/global/networks/858219784076750041",
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.ListEffectiveTagsRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.ListEffectiveTagsResponse"
+      }
+    },
+    "insertId": "1e9x8kydt9pp",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "cloudresourcemanager.googleapis.com",
+        "method": "google.cloud.resourcemanager.v3.TagBindings.ListEffectiveTags",
+        "project_id": "msccp-test"
+      }
+    },
+    "timestamp": "2025-06-13T12:47:40.067462517Z",
+    "severity": "INFO",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-13T12:47:40.944765819Z"
+  }
+]

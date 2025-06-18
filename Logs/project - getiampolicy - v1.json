@@ -1,0 +1,53 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com",
+        "serviceAccountKeyName": "//iam.googleapis.com/projects/msccp-test/serviceAccounts/prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com/keys/711d0583951468a4c27f724399f859fe83b788fd",
+        "principalSubject": "serviceAccount:prisma-cloud-serv-fabur@msccp-test.iam.gserviceaccount.com"
+      },
+      "requestMetadata": {
+        "callerIp": "52.208.244.121",
+        "callerSuppliedUserAgent": "Vert.x-WebClient/4.5.11,gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "GetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/msccp-test",
+          "permission": "resourcemanager.projects.getIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/msccp-test",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "projects/msccp-test",
+      "request": {
+        "options": {
+          "requestedPolicyVersion": 3
+        },
+        "@type": "type.googleapis.com/google.iam.v1.GetIamPolicyRequest",
+        "resource": "msccp-test"
+      }
+    },
+    "insertId": "96ddo3e1kix4",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "msccp-test"
+      }
+    },
+    "timestamp": "2025-06-15T19:39:24.215479Z",
+    "severity": "INFO",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-15T19:39:25.086488963Z"
+  }
+]

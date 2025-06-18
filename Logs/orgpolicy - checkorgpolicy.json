@@ -1,0 +1,49 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "49.205.45.203",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-13T10:49:56.468645664Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "orgpolicy.googleapis.com",
+      "methodName": "google.cloud.orgpolicy.v2.OrgPolicy.CheckOrgPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/msccp-test/policies/gcp.restrictNonCmekServices",
+          "permission": "orgpolicy.policies.check",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_READ"
+        }
+      ],
+      "resourceName": "projects/msccp-test/policies/gcp.restrictNonCmekServices",
+      "request": {
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.CheckOrgPolicyRequest",
+        "name": "projects/msccp-test/policies/gcp.restrictNonCmekServices",
+        "listValue": "compute.googleapis.com"
+      }
+    },
+    "insertId": "1ej2s17dqclz",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "orgpolicy.googleapis.com",
+        "method": "google.cloud.orgpolicy.v2.OrgPolicy.CheckOrgPolicy",
+        "project_id": "msccp-test"
+      }
+    },
+    "timestamp": "2025-06-13T10:49:56.454514704Z",
+    "severity": "INFO",
+    "logName": "projects/msccp-test/logs/cloudaudit.googleapis.com%2Fdata_access",
+    "receiveTimestamp": "2025-06-13T10:49:57.043409899Z"
+  }
+]

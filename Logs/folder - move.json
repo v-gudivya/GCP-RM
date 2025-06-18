@@ -1,0 +1,60 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.232.160",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "MoveFolder",
+      "authorizationInfo": [
+        {
+          "resource": "folders/41643181195",
+          "permission": "resourcemanager.folders.move",
+          "granted": true,
+          "resourceAttributes": {}
+        },
+        {
+          "resource": "organizations/1009039574349",
+          "permission": "resourcemanager.folders.move",
+          "granted": true,
+          "resourceAttributes": {}
+        }
+      ],
+      "resourceName": "folders/1089497039551",
+      "request": {
+        "destinationParent": "folders/41643181195",
+        "name": "folders/1089497039551",
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.MoveFolderRequest"
+      },
+      "response": {
+        "parent": "folders/41643181195",
+        "createTime": "2025-06-02T09:03:17.293Z",
+        "displayName": "Testing Folder RM up",
+        "name": "folders/1089497039551",
+        "updateTime": "2025-06-16T08:26:07.135Z",
+        "etag": "W/\"faba7823ff34d704\"",
+        "state": "ACTIVE",
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.Folder"
+      }
+    },
+    "insertId": "-lmqqzhdrcuk",
+    "resource": {
+      "type": "folder",
+      "labels": {
+        "folder_id": "1089497039551"
+      }
+    },
+    "timestamp": "2025-06-16T08:27:21.452409Z",
+    "severity": "NOTICE",
+    "logName": "folders/41643181195/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-16T08:27:21.617119445Z"
+  }
+]

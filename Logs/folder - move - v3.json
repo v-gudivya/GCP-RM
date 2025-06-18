@@ -1,0 +1,79 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.232.160",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-16T08:26:05.916308Z",
+          "reason": "8uSywAYQGg5Db2xpc2V1bSBGbG93cw",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "google.cloud.resourcemanager.v3.Folders.MoveFolder",
+      "authorizationInfo": [
+        {
+          "resource": "folders/1089497039551",
+          "permission": "resourcemanager.folders.move",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "folders/1089497039551",
+            "type": "cloudresourcemanager.googleapis.com/Folder"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "organizations/1009039574349",
+          "permission": "resourcemanager.folders.move",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "organizations/1009039574349",
+            "type": "cloudresourcemanager.googleapis.com/Organization"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "folders/41643181195",
+          "permission": "resourcemanager.folders.move",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "folders/41643181195",
+            "type": "cloudresourcemanager.googleapis.com/Folder"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "folders/1089497039551",
+      "request": {
+        "name": "folders/1089497039551",
+        "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.MoveFolderRequest"
+      }
+    },
+    "insertId": "1lpvhpme2bcl4",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "cloudresourcemanager.googleapis.com",
+        "method": "google.cloud.resourcemanager.v3.Folders.MoveFolder"
+      }
+    },
+    "timestamp": "2025-06-16T08:26:05.507439841Z",
+    "severity": "NOTICE",
+    "logName": "folders/1089497039551/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "operations/rm.6168965668044182402",
+      "producer": "cloudresourcemanager.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2025-06-16T08:26:06.718247966Z"
+  }
+]

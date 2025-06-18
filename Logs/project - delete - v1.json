@@ -1,0 +1,51 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.59.192.160",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "DeleteProject",
+      "authorizationInfo": [
+        {
+          "resource": "projects/testing-project-rm",
+          "permission": "resourcemanager.projects.delete",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/testing-project-rm",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/testing-project-rm",
+      "request": {
+        "@type": "type.googleapis.com/google.cloudresourcemanager.v1.DeleteProjectRequest",
+        "projectId": "testing-project-rm"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.protobuf.Empty"
+      }
+    },
+    "insertId": "-hfyzlhe10nnq",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "testing-project-rm"
+      }
+    },
+    "timestamp": "2025-06-11T19:32:34.542894Z",
+    "severity": "NOTICE",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-11T19:32:38.047846345Z"
+  }
+]

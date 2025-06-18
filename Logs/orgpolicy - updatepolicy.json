@@ -1,0 +1,73 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.186.136",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-13T13:24:57.245778602Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "orgpolicy.googleapis.com",
+      "methodName": "google.cloud.orgpolicy.v2.OrgPolicy.UpdatePolicy",
+      "authorizationInfo": [
+        {
+          "resource": "organizations/1009039574349/policies/custom.restrictN1MachineTypes",
+          "permission": "orgpolicy.policies.update",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "organizations/1009039574349/policies/custom.restrictN1MachineTypes",
+      "request": {
+        "policy": {
+          "spec": {
+            "rules": [
+              {
+                "enforce": false
+              }
+            ],
+            "etag": "CNrMsMIGEKjvvsUB"
+          },
+          "etag": "CNrMsMIGEKjvvsUB-",
+          "name": "organizations/1009039574349/policies/custom.restrictN1MachineTypes"
+        },
+        "updateMask": "policy.spec",
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.UpdatePolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.Policy",
+        "spec": {
+          "updateTime": "2025-06-13T13:24:57.303942Z",
+          "etag": "CKnNsMIGEPCS95AB",
+          "rules": [
+            {
+              "enforce": false
+            }
+          ]
+        },
+        "name": "organizations/1009039574349/policies/custom.restrictN1MachineTypes",
+        "etag": "CKnNsMIGEPCS95AB-"
+      }
+    },
+    "insertId": "1iyjq0vdqfwp",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.cloud.orgpolicy.v2.OrgPolicy.UpdatePolicy",
+        "service": "orgpolicy.googleapis.com"
+      }
+    },
+    "timestamp": "2025-06-13T13:24:57.235250151Z",
+    "severity": "NOTICE",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-13T13:24:57.923234983Z"
+  }
+]

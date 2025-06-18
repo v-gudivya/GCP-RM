@@ -1,0 +1,52 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "scuba@np-lab.co.il"
+      },
+      "requestMetadata": {
+        "callerIp": "152.57.186.136",
+        "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2025-06-13T13:13:24.251991280Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "orgpolicy.googleapis.com",
+      "methodName": "google.cloud.orgpolicy.v2.OrgPolicy.CreateCustomConstraint",
+      "authorizationInfo": [
+        {
+          "resource": "organizations/1009039574349",
+          "permission": "orgpolicy.customConstraints.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "organizations/1009039574349",
+      "request": {
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.CreateCustomConstraintRequest",
+        "customConstraint": {},
+        "parent": "organizations/1009039574349"
+      },
+      "response": {
+        "updateTime": "2025-06-13T13:13:24.256320Z",
+        "@type": "type.googleapis.com/google.cloud.orgpolicy.v2.CustomConstraint"
+      }
+    },
+    "insertId": "1osfjwydfds0",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.cloud.orgpolicy.v2.OrgPolicy.CreateCustomConstraint",
+        "service": "orgpolicy.googleapis.com"
+      }
+    },
+    "timestamp": "2025-06-13T13:13:24.232519835Z",
+    "severity": "NOTICE",
+    "logName": "organizations/1009039574349/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2025-06-13T13:13:24.541010722Z"
+  }
+]
