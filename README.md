@@ -9,7 +9,7 @@
 <a name="intro">
 
 ## Introduction
-The GCP Resource Manager Codeless Connector for Microsoft Sentinel enables seamless integration of GCP Resource Manager Audit logs with Microsoft Sentinel without the need for custom code. Developed as part of the Codeless Connector Platform(CCP), this connector simplifies the process of collecting and ingesting Resource Manager Audit logs from Google Cloud Platform into Microsoft Sentinel.
+The GCP Resource Manager Codeless Connector for Microsoft Sentinel enables seamless integration of GCP Resource Manager Audit logs with Microsoft Sentinel without the need for custom code. Developed as part of the Codeless Connector Framework(CCF), this connector simplifies the process of collecting and ingesting Resource Manager Audit logs from Google Cloud Platform into Microsoft Sentinel.
 
 <a name="step2">
    
